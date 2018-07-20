@@ -12,7 +12,10 @@ def solve(s):
 			largest_idx += 1 if largest_idx < len(s)-1 else -(len(s)-1)
 			s[largest_idx] += 1
 			largest_num -= 1
-		if ''.join([str(each) for each in s]) in all_combo:
-			return len(all_combo)
-	
-print(str(solve(s)))
+		order = ''.join([str(each) for each in s])
+		if order in all_combo:
+			print('Part 1: ' + str(len(all_combo)))
+			print('Part 2: ' + str( len(all_combo) - all_combo.index(order) )
+			return
+		
+solve(s)				      		      
